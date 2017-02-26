@@ -19,8 +19,8 @@
       <file leaf-file-name="List.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ua/lazareva/datastructures/List.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="29" column="35" lean-forward="false" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+            <state relative-caret-position="34">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -29,51 +29,53 @@
       <file leaf-file-name="ArrayList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ua/lazareva/datastructures/ArrayList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="123" selection-end-column="1" />
+            <state relative-caret-position="85">
+              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding>
-                <element signature="e#619#620#0" expanded="true" />
-                <element signature="e#658#659#0" expanded="true" />
+                <element signature="e#587#588#0" expanded="true" />
+                <element signature="e#626#627#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/ua/lazareva/datastructures/ListTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1350#1351#0" expanded="true" />
-                <element signature="e#1399#1400#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArrayListTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/ua/lazareva/datastructures/ArrayListTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1334#1335#0" expanded="true" />
-                <element signature="e#1382#1383#0" expanded="true" />
-                <element signature="method#testAdd#0;class#ArrayListTest#0" expanded="false" />
-                <element signature="method#testSet#0;class#ArrayListTest#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LinkedList.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LinkedList.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ua/lazareva/datastructures/LinkedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="644">
+              <caret line="175" column="15" lean-forward="false" selection-start-line="175" selection-start-column="15" selection-end-line="175" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HashMap.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ua/lazareva/datastructures/HashMap.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HashMapTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/ua/lazareva/datastructures/HashMapTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/ua/lazareva/datastructures/ListTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -94,7 +96,6 @@
       <find>array</find>
       <find>size</find>
       <find>index &lt;= size / 2</find>
-      <find>remove</find>
       <find>remove(</find>
       <find>length</find>
       <find>clear</find>
@@ -103,9 +104,14 @@
       <find>add</find>
       <find>isempty</find>
       <find>tost</find>
-      <find>set</find>
       <find>arrayList</find>
+      <find>set</find>
+      <find>remove</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -123,20 +129,23 @@
         <option value="$PROJECT_DIR$/src/ua/lazareva/ArrayListTest.java" />
         <option value="$PROJECT_DIR$/src/test/ua/lazareva/datastructures/ArrayListTest.java" />
         <option value="$PROJECT_DIR$/src/ua/lazareva/datastructures/MyList.java" />
-        <option value="$PROJECT_DIR$/src/ua/lazareva/datastructures/List.java" />
-        <option value="$PROJECT_DIR$/src/ua/lazareva/datastructures/ArrayList.java" />
         <option value="$PROJECT_DIR$/test/ua/lazareva/datastructures/ArrayListTest.java" />
-        <option value="$PROJECT_DIR$/src/ua/lazareva/datastructures/LinkedList.java" />
+        <option value="$PROJECT_DIR$/test/ua/lazareva/datastructures/HashMapTest.java" />
         <option value="$PROJECT_DIR$/test/ua/lazareva/datastructures/ListTest.java" />
+        <option value="$PROJECT_DIR$/src/ua/lazareva/datastructures/ArrayList.java" />
+        <option value="$PROJECT_DIR$/src/ua/lazareva/datastructures/List.java" />
+        <option value="$PROJECT_DIR$/src/ua/lazareva/datastructures/HashMap.java" />
+        <option value="$PROJECT_DIR$/src/ua/lazareva/datastructures/LinkedList.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="478" />
-    <option name="y" value="49" />
+    <option name="x" value="383" />
+    <option name="y" value="15" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -156,21 +165,21 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="LazarevaStudy16Feb" />
+              <option name="myItemId" value="DataStructures" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="LazarevaStudy16Feb" />
+              <option name="myItemId" value="DataStructures" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="LazarevaStudy16Feb" />
+              <option name="myItemId" value="DataStructures" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="LazarevaStudy16Feb" />
+              <option name="myItemId" value="DataStructures" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -184,11 +193,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="LazarevaStudy16Feb" />
+              <option name="myItemId" value="DataStructures" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="LazarevaStudy16Feb" />
+              <option name="myItemId" value="DataStructures" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -202,16 +211,17 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -223,96 +233,44 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.ListTest">
-    <configuration default="false" name="ArrayListTest.testIndexOf" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ListTest" type="JUnit" factoryName="JUnit" editBeforeRun="true" activateToolWindowBeforeRun="false" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="ua.lazareva.datastructures.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <module name="LazarevaStudy16Feb" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="ua.lazareva.datastructures" />
-      <option name="MAIN_CLASS_NAME" value="ua.lazareva.datastructures.ArrayListTest" />
-      <option name="METHOD_NAME" value="testIndexOf" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="ArrayListTest.testRemove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="ua.lazareva.datastructures.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="LazarevaStudy16Feb" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="ua.lazareva.datastructures" />
-      <option name="MAIN_CLASS_NAME" value="ua.lazareva.datastructures.ArrayListTest" />
-      <option name="METHOD_NAME" value="testRemove" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="ArrayListTest.testRemovebyIndex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="ua.lazareva.datastructures.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="LazarevaStudy16Feb" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="ua.lazareva.datastructures" />
-      <option name="MAIN_CLASS_NAME" value="ua.lazareva.datastructures.ArrayListTest" />
-      <option name="METHOD_NAME" value="testRemovebyIndex" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="ListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="ua.lazareva.datastructures.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="LazarevaStudy16Feb" />
+      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="ua.lazareva.datastructures" />
       <option name="MAIN_CLASS_NAME" value="ua.lazareva.datastructures.ListTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="HashMapTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ua.lazareva.datastructures.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="DataStructures" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ua.lazareva.datastructures" />
+      <option name="MAIN_CLASS_NAME" value="ua.lazareva.datastructures.HashMapTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -334,13 +292,65 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <module name="LazarevaStudy16Feb" />
+      <module name="DataStructures" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="ua.lazareva.datastructures" />
       <option name="MAIN_CLASS_NAME" value="ua.lazareva.datastructures.ArrayListTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ListTest.testIndexOf" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ua.lazareva.datastructures.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="DataStructures" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ua.lazareva.datastructures" />
+      <option name="MAIN_CLASS_NAME" value="ua.lazareva.datastructures.ListTest" />
+      <option name="METHOD_NAME" value="testIndexOf" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ListTest.testLastIndexOf" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ua.lazareva.datastructures.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="DataStructures" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ua.lazareva.datastructures" />
+      <option name="MAIN_CLASS_NAME" value="ua.lazareva.datastructures.ListTest" />
+      <option name="METHOD_NAME" value="testLastIndexOf" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -558,19 +568,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.ArrayListTest.testIndexOf" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ArrayListTest.testRemove" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ArrayListTest.testRemovebyIndex" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ListTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ArrayListTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.ListTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.HashMapTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ArrayListTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ListTest.testIndexOf" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ListTest.testLastIndexOf" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ListTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ArrayListTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ArrayListTest.testRemovebyIndex" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ArrayListTest.testRemove" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ArrayListTest.testIndexOf" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ListTest.testLastIndexOf" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ListTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.HashMapTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ArrayListTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ListTest.testIndexOf" />
       </list>
     </recent_temporary>
   </component>
@@ -591,40 +601,40 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ArrayListTest - 2017.02.26 at 00h 30m 08s.xml">
+    <history-entry file="ArrayListTest - 2017.02.26 at 03h 14m 12s.xml">
       <configuration name="ArrayListTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayListTest_testRemove - 2017.02.26 at 00h 09m 03s.xml">
-      <configuration name="ArrayListTest.testRemove" configurationId="JUnit" />
+    <history-entry file="HashMapTest - 2017.02.26 at 03h 14m 24s.xml">
+      <configuration name="HashMapTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayListTest_testRemove - 2017.02.26 at 00h 11m 44s.xml">
-      <configuration name="ArrayListTest.testRemove" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArrayListTest_testRemove - 2017.02.26 at 00h 13m 38s.xml">
-      <configuration name="ArrayListTest.testRemove" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArrayListTest_testRemove - 2017.02.26 at 00h 14m 12s.xml">
-      <configuration name="ArrayListTest.testRemove" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArrayListTest_testRemove - 2017.02.26 at 00h 14m 40s.xml">
-      <configuration name="ArrayListTest.testRemove" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArrayListTest_testRemovebyIndex - 2017.02.26 at 00h 16m 25s.xml">
-      <configuration name="ArrayListTest.testRemovebyIndex" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArrayListTest_testRemovebyIndex - 2017.02.26 at 00h 17m 42s.xml">
-      <configuration name="ArrayListTest.testRemovebyIndex" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ListTest - 2017.02.26 at 00h 29m 51s.xml">
+    <history-entry file="ListTest - 2017.02.26 at 02h 49m 23s.xml">
       <configuration name="ListTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ListTest - 2017.02.26 at 00h 34m 32s.xml">
+    <history-entry file="ListTest - 2017.02.26 at 03h 00m 41s.xml">
       <configuration name="ListTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ListTest - 2017.02.26 at 03h 14m 40s.xml">
+      <configuration name="ListTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ListTest_testIndexOf - 2017.02.26 at 03h 03m 45s.xml">
+      <configuration name="ListTest.testIndexOf" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ListTest_testIndexOf - 2017.02.26 at 03h 05m 05s.xml">
+      <configuration name="ListTest.testIndexOf" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ListTest_testLastIndexOf - 2017.02.26 at 03h 06m 07s.xml">
+      <configuration name="ListTest.testLastIndexOf" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ListTest_testLastIndexOf - 2017.02.26 at 03h 08m 41s.xml">
+      <configuration name="ListTest.testLastIndexOf" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ListTest_testLastIndexOf - 2017.02.26 at 03h 14m 56s.xml">
+      <configuration name="ListTest.testLastIndexOf" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="478" y="49" width="1400" height="1000" extended-state="1" />
-    <editor active="false" />
+    <frame x="383" y="15" width="1400" height="1000" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -633,16 +643,15 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5455224" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3859447" sideWeight="0.46567163" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3859447" sideWeight="0.4544776" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44009218" sideWeight="0.53432834" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19626866" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24253732" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -652,6 +661,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -691,7 +701,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="28" />
+      <option name="time" value="29" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
@@ -704,20 +714,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/ua/lazareva/datastructures/ArrayListTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1334#1335#0" expanded="true" />
-            <element signature="e#1382#1383#0" expanded="true" />
-            <element signature="method#testAdd#0;class#ArrayListTest#0" expanded="false" />
-            <element signature="method#testSet#0;class#ArrayListTest#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/regex/Matcher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3706">
@@ -772,16 +768,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="e#338#339#0" expanded="false" />
-            <element signature="e#365#366#0" expanded="false" />
-            <element signature="e#404#405#0" expanded="false" />
-            <element signature="e#447#448#0" expanded="false" />
-            <element signature="e#927#928#0" expanded="false" />
-            <element signature="e#959#960#0" expanded="false" />
-            <element signature="e#1471#1472#0" expanded="false" />
-            <element signature="e#1533#1534#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -791,8 +778,8 @@
         <state relative-caret-position="374">
           <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
           <folding>
-            <element signature="e#619#620#0" expanded="true" />
-            <element signature="e#658#659#0" expanded="true" />
+            <element signature="e#587#588#0" expanded="true" />
+            <element signature="e#626#627#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -823,16 +810,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-          <folding>
-            <element signature="e#338#339#0" expanded="false" />
-            <element signature="e#365#366#0" expanded="false" />
-            <element signature="e#404#405#0" expanded="false" />
-            <element signature="e#447#448#0" expanded="false" />
-            <element signature="e#927#928#0" expanded="false" />
-            <element signature="e#959#960#0" expanded="false" />
-            <element signature="e#1471#1472#0" expanded="false" />
-            <element signature="e#1533#1534#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -842,8 +820,8 @@
         <state relative-caret-position="374">
           <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
           <folding>
-            <element signature="e#619#620#0" expanded="true" />
-            <element signature="e#658#659#0" expanded="true" />
+            <element signature="e#587#588#0" expanded="true" />
+            <element signature="e#626#627#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -874,16 +852,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-          <folding>
-            <element signature="e#338#339#0" expanded="false" />
-            <element signature="e#365#366#0" expanded="false" />
-            <element signature="e#404#405#0" expanded="false" />
-            <element signature="e#447#448#0" expanded="false" />
-            <element signature="e#927#928#0" expanded="false" />
-            <element signature="e#959#960#0" expanded="false" />
-            <element signature="e#1471#1472#0" expanded="false" />
-            <element signature="e#1533#1534#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -893,8 +862,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#619#620#0" expanded="true" />
-            <element signature="e#658#659#0" expanded="true" />
+            <element signature="e#587#588#0" expanded="true" />
+            <element signature="e#626#627#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -925,16 +894,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-          <folding>
-            <element signature="e#338#339#0" expanded="false" />
-            <element signature="e#365#366#0" expanded="false" />
-            <element signature="e#404#405#0" expanded="false" />
-            <element signature="e#447#448#0" expanded="false" />
-            <element signature="e#927#928#0" expanded="false" />
-            <element signature="e#959#960#0" expanded="false" />
-            <element signature="e#1471#1472#0" expanded="false" />
-            <element signature="e#1533#1534#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -944,8 +904,8 @@
         <state relative-caret-position="561">
           <caret line="33" column="25" lean-forward="true" selection-start-line="30" selection-start-column="8" selection-end-line="33" selection-end-column="25" />
           <folding>
-            <element signature="e#619#620#0" expanded="true" />
-            <element signature="e#658#659#0" expanded="true" />
+            <element signature="e#587#588#0" expanded="true" />
+            <element signature="e#626#627#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -963,16 +923,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-          <folding>
-            <element signature="e#338#339#0" expanded="false" />
-            <element signature="e#365#366#0" expanded="false" />
-            <element signature="e#404#405#0" expanded="false" />
-            <element signature="e#447#448#0" expanded="false" />
-            <element signature="e#927#928#0" expanded="false" />
-            <element signature="e#959#960#0" expanded="false" />
-            <element signature="e#1471#1472#0" expanded="false" />
-            <element signature="e#1533#1534#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -982,8 +933,8 @@
         <state relative-caret-position="306">
           <caret line="18" column="9" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="18" selection-end-column="9" />
           <folding>
-            <element signature="e#619#620#0" expanded="true" />
-            <element signature="e#658#659#0" expanded="true" />
+            <element signature="e#587#588#0" expanded="true" />
+            <element signature="e#626#627#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1068,23 +1019,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ua/lazareva/test.java" />
-    <entry file="file://$PROJECT_DIR$/src/ua/lazareva/datastructures/HashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="e#338#339#0" expanded="false" />
-            <element signature="e#365#366#0" expanded="false" />
-            <element signature="e#404#405#0" expanded="false" />
-            <element signature="e#447#448#0" expanded="false" />
-            <element signature="e#927#928#0" expanded="false" />
-            <element signature="e#959#960#0" expanded="false" />
-            <element signature="e#1471#1472#0" expanded="false" />
-            <element signature="e#1533#1534#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ua/lazareva/datastructures/MyList.java" />
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/hamcrest-core-1.3.jar!/org/hamcrest/CoreMatchers.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -1139,7 +1073,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="37" column="6" lean-forward="false" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1147,7 +1080,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="36" column="36" lean-forward="true" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1159,37 +1091,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/lazareva/datastructures/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="29" column="35" lean-forward="false" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/lazareva/datastructures/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="123" selection-end-column="1" />
-          <folding>
-            <element signature="e#619#620#0" expanded="true" />
-            <element signature="e#658#659#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ua/lazareva/datastructures/LinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/ua/lazareva/datastructures/ArrayListTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+        <state relative-caret-position="243">
+          <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1334#1335#0" expanded="true" />
@@ -1200,15 +1105,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/ua/lazareva/datastructures/ListTest.java">
+    <entry file="file://$PROJECT_DIR$/src/ua/lazareva/datastructures/List.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/lazareva/datastructures/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="e#587#588#0" expanded="true" />
+            <element signature="e#626#627#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/lazareva/datastructures/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ua/lazareva/datastructures/HashMapTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1350#1351#0" expanded="true" />
-            <element signature="e#1399#1400#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ua/lazareva/datastructures/ListTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ua/lazareva/datastructures/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="175" column="15" lean-forward="false" selection-start-line="175" selection-start-column="15" selection-end-line="175" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>

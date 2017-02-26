@@ -1,5 +1,4 @@
 package ua.lazareva.datastructures;
-//https://gist.github.com/olazareva/6a5c5a70183c6f4f8933796f443046f6
 
 import org.junit.Before;
 import org.junit.Test;

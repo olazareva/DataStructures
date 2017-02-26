@@ -1,12 +1,10 @@
 package ua.lazareva.datastructures;
 
-/**
- * Created by Olga on 2/19/2017.
- */
+
 public class HashMap {
 
-    int size;
     java.util.ArrayList<Entry>[] array;
+    private int size;
 
     HashMap() {
         array = new java.util.ArrayList[5];
@@ -57,10 +55,6 @@ public class HashMap {
         bucket.add(new Entry(key, value));
         size++;
         return null;
-    }
-
-    private int getBucketIndex(Object key) {
-        return Math.abs(key.hashCode() % array.length);
     }
 
 
@@ -118,7 +112,11 @@ public class HashMap {
         return null;
     }
 
-    public static class Entry {
+    private int getBucketIndex(Object key) {
+        return Math.abs(key.hashCode() % array.length);
+    }
+
+    private static class Entry {
         Object key;
         Object value;
 
@@ -127,5 +125,4 @@ public class HashMap {
             this.value = value;
         }
     }
-
 }

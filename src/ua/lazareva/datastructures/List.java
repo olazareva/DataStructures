@@ -1,8 +1,5 @@
 package ua.lazareva.datastructures;
 
-/**
- * Created by Olga on 2/23/2017.
- */
 public interface List {
 
     int size();

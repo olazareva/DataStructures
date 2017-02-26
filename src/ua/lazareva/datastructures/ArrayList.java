@@ -1,7 +1,5 @@
 package ua.lazareva.datastructures;
 
-import java.util.StringJoiner;
-
 public class ArrayList implements List {
 
     Object[] array;
