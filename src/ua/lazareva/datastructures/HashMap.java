@@ -3,68 +3,90 @@ package ua.lazareva.datastructures;
 
 public class HashMap {
 
-    java.util.ArrayList<Entry>[] array;
+    private java.util.ArrayList<Entry>[] array;
     private int size;
 
-    HashMap() {
+    public HashMap() {
         array = new java.util.ArrayList[5];
         for (int i = 0; i < array.length; i++)
             array[i] = new java.util.ArrayList<>();
     }
 
-    int size() {
+    public int size() {
         return size;
     }
 
-    boolean containsKey(Object key) {
-        return !get(key).equals(-1);
+    public boolean containsKey(Object key) {
+        int index = getBucketIndex(key);
+        for (Entry entry : array[index]) {
+            if ((key == null && entry.key == null) ||key.equals( entry.key)) return true;
+        }
+        return false;
     }
 
-    boolean containsValue(Object value) {
+    public boolean containsValue(Object value) {
         for (int i = 0; i < array.length; i++) {
             for (Entry entry : array[i]) {
-                if (value.equals(entry.value)) return true;
+                if ((value == null && entry.value == null) || value.equals(entry.value)) {
+                    return true;
+                }
             }
         }
         return false;
     }
 
-    Object get(Object key) {
+    public Object get(Object key) {
         int index = getBucketIndex(key);
         for (Entry entry : array[index]) {
-            if (entry.key.equals(key)) return entry.value;
+            if ((key == null && entry.key == null) || key.equals(entry.key)) return entry.value;
         }
-        return -1;
+        return null;
     }
 
-    boolean isEmpty() {
+    public boolean isEmpty() {
         return size == 0;
     }
 
-    Object put(Object key, Object value) {
+    public Object put(Object key, Object value) {
+        ensureCapacity();
         int index = getBucketIndex(key);
-        Object oldValue;
         java.util.ArrayList<Entry> bucket = array[index];
         for (Entry entry : bucket) {
-            if (entry.key.equals(key)) {
-                oldValue = entry.value;
+            if ((key == null && entry.key == null) || key.equals(entry.key)) {
+                Object oldValue = entry.value;
                 entry.value = value;
                 return oldValue;
             }
         }
         bucket.add(new Entry(key, value));
         size++;
-        return null;
+        return value;
     }
 
+    private void ensureCapacity() {
+        if (size > array.length * 0.75) {
+            java.util.ArrayList<Entry>[] arrayExtended = new java.util.ArrayList[array.length * 2];
+            for (int i = 0; i < arrayExtended.length; i++) {
+                arrayExtended[i] = new java.util.ArrayList<>();
+            }
+            java.util.ArrayList<Entry>[] arrayOld = array;
+            array = arrayExtended;
+            size = 0;
+            for (int i = 0; i < arrayOld.length; i++) {
+                for (Entry entry : arrayOld[i]) {
+                    put(entry.key, entry.value);
+                }
+            }
+        }
+    }
 
-    Object remove(Object key) {
+    public Object remove(Object key) {
         int index = getBucketIndex(key);
         java.util.ArrayList<Entry> bucket = array[index];
 
         for (int i = 0; i < bucket.size(); i++) {
             Entry entry = bucket.get(i);
-            if (key.equals(entry.key)) {
+            if ((key == null && entry.key == null) || key.equals(entry.key)) {
                 Object tmpObject = entry.value;
                 bucket.remove(i);
                 size--;
@@ -74,14 +96,14 @@ public class HashMap {
         return null;
     }
 
-    void clear() {
+    public void clear() {
         for (int i = 0; i < array.length; i++) {
             array[i] = null;
         }
         size = 0;
     }
 
-    Object putIfAbsent(Object key, Object value) {
+    public Object putIfAbsent(Object key, Object value) {
 
         if (!containsKey(key)) {
 
@@ -96,7 +118,7 @@ public class HashMap {
         return null;
     }
 
-    void putAll(HashMap map) {
+    public void putAll(HashMap map) {
         for (int i = 0; i < map.array.length; i++) {
             for (Entry entry : map.array[i])
                 put(entry.key, entry.value);
@@ -104,7 +126,7 @@ public class HashMap {
 
     }
 
-    Object putAllIfAbsent(HashMap map) {
+    public Object putAllIfAbsent(HashMap map) {
         for (int i = 0; i < map.array.length; i++) {
             for (Entry entry : map.array[i])
                 putIfAbsent(entry.key, entry.value);
@@ -113,12 +135,16 @@ public class HashMap {
     }
 
     private int getBucketIndex(Object key) {
+        if (key == null) {
+            return 0;
+        }
         return Math.abs(key.hashCode() % array.length);
+
     }
 
     private static class Entry {
-        Object key;
-        Object value;
+        private Object key;
+        private Object value;
 
         private Entry(Object key, Object value) {
             this.key = key;

@@ -3,44 +3,49 @@ package ua.lazareva.datastructures;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class HashMapTest {
-    HashMap hashMap;
+    private HashMap hashMap;
 
     @Before
     public void before() {
         hashMap = new HashMap();
-        for (int i = 0; i < 10; i++) {
-            assertEquals(null, hashMap.put("key" + i, "value" + i));
+
+        assertEquals("nullvalue", hashMap.put(null, "nullvalue"));
+
+        for (int i = 0; i < 9; i++) {
+            assertEquals("value"+i, hashMap.put("key" + i, "value" + i));
         }
         assertEquals(10, hashMap.size());
     }
 
     @Test
     public void testGet() {
-        for (int i = 0; i < hashMap.size(); i++) {
+        assertEquals("nullvalue", hashMap.get(null));
+
+        for (int i = 0; i < hashMap.size()-1; i++) {
             assertEquals("value" + i, hashMap.get("key" + i));
         }
-        assertEquals(-1, hashMap.get("key" + 10));
+        assertNull(hashMap.get("key" + 10));
     }
 
     @Test
     public void testContainsKey() {
-        for (int i = 0; i < hashMap.size(); i++) {
-            assertTrue(true == hashMap.containsKey("key" + i));
+        for (int i = 0; i < hashMap.size()-1; i++) {
+            assertTrue(hashMap.containsKey("key" + i));
         }
-        assertTrue(false == hashMap.containsKey("key" + 10));
+        assertTrue(hashMap.containsKey(null));
+        assertFalse(hashMap.containsKey("key" + 10));
 
     }
 
     @Test
     public void testContainsValue() {
-        for (int i = 0; i < hashMap.size(); i++) {
-            assertTrue(true == hashMap.containsValue("value" + i));
+        for (int i = 0; i < hashMap.size()-1; i++) {
+            assertTrue(hashMap.containsValue("value" + i));
         }
-        assertTrue(false == hashMap.containsValue("value" + 10));
+        assertFalse(hashMap.containsValue("value" + 10));
 
     }
 
@@ -52,28 +57,31 @@ public class HashMapTest {
 
     @Test
     public void testRemove() {
-        assertEquals("value9", hashMap.remove("key9"));
-        assertTrue(false == hashMap.containsKey("key9"));
+        assertNull(hashMap.remove("key9"));
+
+        assertEquals("nullvalue", hashMap.remove(null));
+        assertFalse(hashMap.containsKey("key9"));
 
         assertEquals("value5", hashMap.remove("key5"));
-        assertTrue(false == hashMap.containsKey("key9"));
+        assertFalse(hashMap.containsKey("key9"));
 
         assertEquals("value0", hashMap.remove("key0"));
-        assertTrue(false == hashMap.containsKey("key9"));
+        assertFalse(hashMap.containsKey("key9"));
 
-        assertEquals(null, hashMap.remove("key10"));
+        assertNull(hashMap.remove("key10"));
         assertEquals(7, hashMap.size());
 
     }
 
     @Test
     public void testPut() {
-        assertEquals("value9", hashMap.put("key9", "newvalue"));
+        assertEquals("value8", hashMap.put("key8", "newvalue"));
+        assertEquals("nullvalue", hashMap.put(null, "newvalue"));
     }
 
     @Test
     public void testPutIfAbsent() {
-        assertEquals(null, hashMap.putIfAbsent("key8", "newvalue8"));
+        assertNull( hashMap.putIfAbsent("key8", "newvalue8"));
         assertEquals("value10", hashMap.putIfAbsent("key10", "value10"));
     }
 
@@ -81,14 +89,15 @@ public class HashMapTest {
     public void testPutAll() {
         HashMap hashMapToAdd = new HashMap();
         for (int i = 5; i < 15; i++) {
-            assertEquals(null, hashMapToAdd.put("key" + i, "hashMapToAdd" + i));
+            assertEquals("hashMapToAdd" + i,  hashMapToAdd.put("key" + i, "hashMapToAdd" + i));
         }
         hashMap.putAll(hashMapToAdd);
-        assertEquals(15, hashMap.size());
-        for (int i = 0; i < 5; i++) {
+        assertEquals(16, hashMap.size());
+        for (int i = 1; i < 5; i++) {
             assertEquals("value" + i, hashMap.get("key" + i));
         }
-        for (int i = 5; i < hashMap.size(); i++) {
+        assertEquals("nullvalue", hashMap.get(null));
+        for (int i = 5; i < hashMap.size()-1; i++) {
             assertEquals("hashMapToAdd" + i, hashMap.get("key" + i));
         }
     }
@@ -97,14 +106,15 @@ public class HashMapTest {
     public void testPutAllIfAbsent() {
         HashMap hashMapToAdd = new HashMap();
         for (int i = 5; i < 15; i++) {
-            assertEquals(null, hashMapToAdd.put("key" + i, "hashMapToAdd" + i));
+            assertEquals("hashMapToAdd" + i, hashMapToAdd.put("key" + i, "hashMapToAdd" + i));
         }
         hashMap.putAllIfAbsent(hashMapToAdd);
-        assertEquals(15, hashMap.size());
-        for (int i = 0; i < 10; i++) {
+        assertEquals(16, hashMap.size());
+        for (int i = 1; i < 9; i++) {
             assertEquals("value" + i, hashMap.get("key" + i));
         }
-        for (int i = 10; i < hashMap.size(); i++) {
+        assertEquals("nullvalue", hashMap.get(null));
+        for (int i = 10; i < hashMap.size()-1; i++) {
             assertEquals("hashMapToAdd" + i, hashMap.get("key" + i));
         }
     }

@@ -1,5 +1,5 @@
 package ua.lazareva.datastructures;
-//https://gist.github.com/olazareva/6a5c5a70183c6f4f8933796f443046f6
+
 
 import org.junit.Before;
 import org.junit.Test;
@@ -8,9 +8,9 @@ import static org.junit.Assert.*;
 
 
 public class ArrayListTest {
-    ArrayList arrayListWithThreeElements;
-    ArrayList arrayListWithTenElements;
-    ArrayList arrayListWithZeroElements;
+    private ArrayList arrayListWithThreeElements;
+    private ArrayList arrayListWithTenElements;
+    private ArrayList arrayListWithZeroElements;
 
 
     @Before
@@ -34,10 +34,10 @@ public class ArrayListTest {
 
     @Test
     public void testGet() {
-        for (int i = 0; i < arrayListWithThreeElements.size; i++) {
+        for (int i = 0; i < arrayListWithThreeElements.size(); i++) {
             assertEquals(i, arrayListWithThreeElements.get(i));
         }
-        for (int i = 0; i < arrayListWithTenElements.size; i++) {
+        for (int i = 0; i < arrayListWithTenElements.size(); i++) {
             assertEquals(i, arrayListWithTenElements.get(i));
         }
     }
@@ -50,20 +50,20 @@ public class ArrayListTest {
     @Test
     public void testAdd() {
         arrayListWithThreeElements.add(-1, 0);
-        assertEquals(-1, arrayListWithThreeElements.array[0]);
+        assertEquals(-1, arrayListWithThreeElements.get(0));
 
         arrayListWithThreeElements.add(-1, 1);
-        assertEquals(-1, arrayListWithThreeElements.array[1]);
+        assertEquals(-1, arrayListWithThreeElements.get(1));
 
         arrayListWithThreeElements.add(-1, 5);
-        assertEquals(-1, arrayListWithThreeElements.array[5]);
+        assertEquals(-1, arrayListWithThreeElements.get(5));
 
         try {
             arrayListWithThreeElements.add(-1, 7);
         } catch (Exception e) {
             assertEquals(IndexOutOfBoundsException.class, e.getClass());
         }
-        for (int i = 2; i < arrayListWithThreeElements.size - 1; i++) {
+        for (int i = 2; i < arrayListWithThreeElements.size() - 1; i++) {
             assertEquals(i - 2, arrayListWithThreeElements.get(i));
         }
 
@@ -74,7 +74,7 @@ public class ArrayListTest {
         }
 
         arrayListWithZeroElements.add(-1, 0);
-        assertEquals(-1, arrayListWithZeroElements.array[0]);
+        assertEquals(-1, arrayListWithZeroElements.get(0));
 
 
     }
@@ -92,18 +92,18 @@ public class ArrayListTest {
         */
         arrayListWithThreeElements.clear();
         arrayListWithTenElements.clear();
-        assertEquals(0, arrayListWithThreeElements.size);
-        assertEquals(0, arrayListWithTenElements.size);
-        assertEquals(0, arrayListWithZeroElements.size);
+        assertEquals(0, arrayListWithThreeElements.size());
+        assertEquals(0, arrayListWithTenElements.size());
+        assertEquals(0, arrayListWithZeroElements.size());
     }
 
     @Test
     public void testSet() {
-        for (int i = 0; i < arrayListWithThreeElements.size; i++) {
+        for (int i = 0; i < arrayListWithThreeElements.size(); i++) {
             arrayListWithThreeElements.set(-1 * i, i);
             assertEquals(-1 * i, arrayListWithThreeElements.get(i));
         }
-        for (int i = 0; i < arrayListWithTenElements.size; i++) {
+        for (int i = 0; i < arrayListWithTenElements.size(); i++) {
             arrayListWithTenElements.set(-1 * i, i);
             assertEquals(-1 * i, arrayListWithTenElements.get(i));
         }
@@ -142,30 +142,30 @@ public class ArrayListTest {
     @Test
     public void testRemove(){
         arrayListWithTenElements.remove((Object)8);
-        assertEquals(9,arrayListWithTenElements.array[8]);
+        assertEquals(9,arrayListWithTenElements.get(8));
         assertEquals(9,arrayListWithTenElements.size());
 
         arrayListWithTenElements.remove((Object)9);
-        assertEquals(7,arrayListWithTenElements.array[7]);
+        assertEquals(7,arrayListWithTenElements.get(7));
         assertEquals(8,arrayListWithTenElements.size());
 
         arrayListWithTenElements.remove((Object)0);
-        assertEquals(1,arrayListWithTenElements.array[0]);
+        assertEquals(1,arrayListWithTenElements.get(0));
         assertEquals(7,arrayListWithTenElements.size());
     }
 
     @Test
     public void testRemovebyIndex(){
         arrayListWithTenElements.remove(8);
-        assertEquals(9,arrayListWithTenElements.array[8]);
+        assertEquals(9,arrayListWithTenElements.get(8));
         assertEquals(9,arrayListWithTenElements.size());
 
         arrayListWithTenElements.remove(8);
-        assertEquals(7,arrayListWithTenElements.array[7]);
+        assertEquals(7,arrayListWithTenElements.get(7));
         assertEquals(8,arrayListWithTenElements.size());
 
         arrayListWithTenElements.remove(0);
-        assertEquals(1,arrayListWithTenElements.array[0]);
+        assertEquals(1,arrayListWithTenElements.get(0));
         assertEquals(7,arrayListWithTenElements.size());
     }
 }

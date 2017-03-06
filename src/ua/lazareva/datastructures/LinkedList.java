@@ -2,9 +2,9 @@ package ua.lazareva.datastructures;
 
 
 public class LinkedList implements List {
-    int size;
-    Node head;
-    Node tail;
+    private int size;
+    private Node head;
+    private Node tail;
 
     @Override
     public int size() {
@@ -18,6 +18,7 @@ public class LinkedList implements List {
 
     @Override
     public void add(Object object, int index) {
+        validateIndexToAdd(index);
         Node nodeToAdd = new Node(object);
 
         if (size == 0) {
@@ -46,6 +47,7 @@ public class LinkedList implements List {
 
     @Override
     public Object get(int index) {
+        validateIndex(index);
         return getNode(index).value;
     }
 
@@ -54,7 +56,9 @@ public class LinkedList implements List {
     public void remove(Object object) {
         Node nodeToRemove;
         for (int i = 0; i < size; i++) {
+
             nodeToRemove = getNode(i);
+
             if (object.equals(nodeToRemove.value)) {
 
                 if (size == 1) {
@@ -76,6 +80,7 @@ public class LinkedList implements List {
 
     @Override
     public Object remove(int index) {
+        validateIndex(index);
         Node nodeToRemove;
 
         if (size == 1) {
@@ -105,6 +110,7 @@ public class LinkedList implements List {
 
     @Override
     public void set(Object object, int index) {
+        validateIndex(index);
         getNode(index).value = object;
     }
 
@@ -150,8 +156,14 @@ public class LinkedList implements List {
         }
     }
 
+    private void validateIndexToAdd(int index) {
+        if (index < 0 || index > size) {
+            String msg = "Index " + index + " should be between 0 and " + size + " inclusive";
+            throw new IndexOutOfBoundsException(msg);
+        }
+    }
+
     private Node getNode(int index) {
-        validateIndex(index);
         Node node;
 
         if (index <= size / 2) {
@@ -169,9 +181,9 @@ public class LinkedList implements List {
     }
 
     private static class Node {
-        Node prev;
-        Node next;
-        Object value;
+        private Node prev;
+        private Node next;
+        private Object value;
 
         private Node(Object obj) {
             value = obj;

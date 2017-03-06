@@ -3,13 +3,15 @@ package ua.lazareva.datastructures;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.*;
+
 import static org.junit.Assert.*;
 
 
 public class ListTest {
-    LinkedList linkedListWithThreeElements;
-    LinkedList linkedListWithTenElements;
-    LinkedList linkedListWithZeroElements;
+    private LinkedList linkedListWithThreeElements;
+    private LinkedList linkedListWithTenElements;
+    private LinkedList linkedListWithZeroElements;
 
 
     @Before
@@ -33,10 +35,10 @@ public class ListTest {
 
     @Test
     public void testGet() {
-        for (int i = 0; i < linkedListWithThreeElements.size; i++) {
+        for (int i = 0; i < linkedListWithThreeElements.size(); i++) {
             assertEquals(i, linkedListWithThreeElements.get(i));
         }
-        for (int i = 0; i < linkedListWithTenElements.size; i++) {
+        for (int i = 0; i < linkedListWithTenElements.size(); i++) {
             assertEquals(i, linkedListWithTenElements.get(i));
         }
     }
@@ -62,7 +64,7 @@ public class ListTest {
         } catch (Exception e) {
             assertEquals(IndexOutOfBoundsException.class, e.getClass());
         }
-        for (int i = 2; i < linkedListWithThreeElements.size - 1; i++) {
+        for (int i = 2; i < linkedListWithThreeElements.size() - 1; i++) {
             assertEquals(i - 2, linkedListWithThreeElements.get(i));
         }
 
@@ -82,18 +84,18 @@ public class ListTest {
     public void testIsEmpty() {
         linkedListWithThreeElements.clear();
         linkedListWithTenElements.clear();
-        assertEquals(0, linkedListWithThreeElements.size);
-        assertEquals(0, linkedListWithTenElements.size);
-        assertEquals(0, linkedListWithZeroElements.size);
+        assertEquals(0, linkedListWithThreeElements.size());
+        assertEquals(0, linkedListWithTenElements.size());
+        assertEquals(0, linkedListWithZeroElements.size());
     }
 
     @Test
     public void testSet() {
-        for (int i = 0; i < linkedListWithThreeElements.size; i++) {
+        for (int i = 0; i < linkedListWithThreeElements.size(); i++) {
             linkedListWithThreeElements.set(-1 * i, i);
             assertEquals(-1 * i, linkedListWithThreeElements.get(i));
         }
-        for (int i = 0; i < linkedListWithTenElements.size; i++) {
+        for (int i = 0; i < linkedListWithTenElements.size(); i++) {
             linkedListWithTenElements.set(-1 * i, i);
             assertEquals(-1 * i, linkedListWithTenElements.get(i));
         }

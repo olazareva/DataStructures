@@ -2,11 +2,11 @@ package ua.lazareva.datastructures;
 
 public class ArrayList implements List {
 
-    Object[] array;
-    int size;
+    private Object[] array;
+    private int size;
 
 
-    ArrayList() {
+    public ArrayList() {
         array = new Object[5];
     }
 
