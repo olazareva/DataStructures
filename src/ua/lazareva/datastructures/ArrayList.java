@@ -1,42 +1,42 @@
 package ua.lazareva.datastructures;
 
-public class ArrayList implements List {
+public class ArrayList<T> implements List<T> {
 
-    private Object[] array;
+    private T[] array;
     private int size;
 
 
     public ArrayList() {
-        array = new Object[5];
+        array = new T[5];
     }
 
     @Override
-    public Object get(int index) {
+    public T get(int index) {
         validateIndex(index);
         return array[index];
     }
 
     @Override
-    public Object remove(int index) {
+    public T remove(int index) {
         validateIndex(index);
 
-        Object tmpObject = array[index];
+        T tmpObject = array[index];
         System.arraycopy(array, index + 1, array, index, size - 1 - index);
         size--;
         return tmpObject;
     }
 
     @Override
-    public void remove(Object object) {
+    public void remove(T object) {
         remove(indexOf(object));
     }
 
-    public void add(Object obj, int index) {  //0<=index<=size
+    public void add(T obj, int index) {  //0<=index<=size
         validateIndexToAdd(index);
 
         if (size == array.length) {
             int newLength = (int) (array.length * 1.5) + 1;
-            Object[] newArray = new Object[newLength];
+            T[] newArray = new T[newLength];
 
             System.arraycopy(array, 0, newArray, 0, size);
             array = newArray;
@@ -53,11 +53,11 @@ public class ArrayList implements List {
         return size;
     }
     @Override
-    public void add(Object obj) {
+    public void add(T obj) {
         add(obj, size);
     }
 
-    public int indexOf(Object findObj) {
+    public int indexOf(T findObj) {
         for (int i = 0; i < size; i++) {
             if (array[i].equals(findObj)) {
                 return i;
@@ -66,7 +66,7 @@ public class ArrayList implements List {
         return -1;
     }
 
-    public int lastIndexOf(Object findObj) {
+    public int lastIndexOf(T findObj) {
         for (int i = size - 1; i >= 0; i--) {
             if (array[i].equals(findObj)) {
                 return i;
@@ -79,7 +79,7 @@ public class ArrayList implements List {
         return size == 0;
     }
 
-    public boolean contains(Object value) {
+    public boolean contains(T value) {
         return indexOf(value) != -1;
     }
 
@@ -92,7 +92,7 @@ public class ArrayList implements List {
     }
 
 
-    public void set(Object obj, int index) {
+    public void set(T obj, int index) {
         validateIndex(index);
         array[index] = obj;
     }

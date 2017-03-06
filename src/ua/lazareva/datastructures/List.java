@@ -1,28 +1,28 @@
 package ua.lazareva.datastructures;
 
-public interface List {
+public interface List<T> {
 
     int size();
 
-    void add(Object object);
+    void add(T t);
 
-    void add(Object object, int index);
+    void add(T t, int index);
 
-    Object get(int index);
+    T get(int index);
 
-    void remove(Object object);
+    void remove(T t);
 
-    Object remove(int index);
+    T remove(int index);
 
     boolean isEmpty();
 
-    void set(Object object, int index);
+    void set(T t, int index);
 
-    boolean contains(Object object);
+    boolean contains(T t);
 
     void clear();
 
-    int indexOf(Object object);
+    int indexOf(T t);
 
-    int lastIndexOf(Object object);
+    int lastIndexOf(T t);
 }
