@@ -1,13 +1,13 @@
-package ua.lazareva.datastructures;
+package ua.lazareva.datastructures.list;
 
-public class ArrayList<T> implements List<T> {
+public class ArrayList<T> implements List<T>{
 
     private T[] array;
     private int size;
 
 
     public ArrayList() {
-        array = new T[5];
+        array = (T[]) new Object[5];
     }
 
     @Override
@@ -27,8 +27,14 @@ public class ArrayList<T> implements List<T> {
     }
 
     @Override
-    public void remove(T object) {
-        remove(indexOf(object));
+    public void remove(T object)  {
+
+        for (int index = 0; index < size; index++) {
+            if (array[index].equals(object)) {
+                System.arraycopy(array, index + 1, array, index, size - 1 - index);
+                size--;
+            }
+        }
     }
 
     public void add(T obj, int index) {  //0<=index<=size
@@ -36,7 +42,7 @@ public class ArrayList<T> implements List<T> {
 
         if (size == array.length) {
             int newLength = (int) (array.length * 1.5) + 1;
-            T[] newArray = new T[newLength];
+            T[] newArray = (T[]) new Object[newLength];
 
             System.arraycopy(array, 0, newArray, 0, size);
             array = newArray;
@@ -52,6 +58,7 @@ public class ArrayList<T> implements List<T> {
     public int size() {
         return size;
     }
+
     @Override
     public void add(T obj) {
         add(obj, size);
@@ -97,14 +104,6 @@ public class ArrayList<T> implements List<T> {
         array[index] = obj;
     }
 
-
-    /*public String toString() {
-        StringJoiner stringJoiner = new StringJoiner(",", "[", "]");
-        for (int i = 0; i < size; i++) {
-            stringJoiner.add((String) array[i]);
-        }
-        return stringJoiner.toString();
-    }*/
 
     private void validateIndex(int index) {
         if (index < 0 || index >= size) {

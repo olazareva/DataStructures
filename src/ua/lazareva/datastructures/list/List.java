@@ -1,4 +1,4 @@
-package ua.lazareva.datastructures;
+package ua.lazareva.datastructures.list;
 
 public interface List<T> {
 
@@ -10,7 +10,7 @@ public interface List<T> {
 
     T get(int index);
 
-    void remove(T t);
+    void remove(T t) ;
 
     T remove(int index);
 
@@ -22,7 +22,7 @@ public interface List<T> {
 
     void clear();
 
-    int indexOf(T t);
+    int indexOf(T t) ;
 
-    int lastIndexOf(T t);
+    int lastIndexOf(T t) ;
 }

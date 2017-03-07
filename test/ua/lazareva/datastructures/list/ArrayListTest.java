@@ -1,4 +1,4 @@
-package ua.lazareva.datastructures;
+package ua.lazareva.datastructures.list;
 
 
 public class ArrayListTest extends AbstractListTest{

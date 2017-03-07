@@ -1,7 +1,7 @@
-package ua.lazareva.datastructures;
+package ua.lazareva.datastructures.list;
 
 
-public class LinkedList implements List {
+public class LinkedList<T> implements List<T> {
     private int size;
     private Node head;
     private Node tail;
@@ -12,18 +12,17 @@ public class LinkedList implements List {
     }
 
     @Override
-    public void add(Object object) {
+    public void add(T object) {
         add(object, size);
     }
 
     @Override
-    public void add(Object object, int index) {
+    public void add(T object, int index) {
         validateIndexToAdd(index);
         Node nodeToAdd = new Node(object);
 
         if (size == 0) {
-
-            head = tail = nodeToAdd;
+    head = tail = nodeToAdd;
         } else if (index == 0) {
             nodeToAdd.next = head;
             head.prev = nodeToAdd;
@@ -46,42 +45,47 @@ public class LinkedList implements List {
     }
 
     @Override
-    public Object get(int index) {
+    public T get(int index) {
         validateIndex(index);
         return getNode(index).value;
     }
 
 
     @Override
-    public void remove(Object object) {
-        Node nodeToRemove;
-        for (int i = 0; i < size; i++) {
+    public void remove(T object) {
+        Node nodeToRemove = head;
 
-            nodeToRemove = getNode(i);
-
-            if (object.equals(nodeToRemove.value)) {
-
-                if (size == 1) {
-                    head = tail = null;
-                } else if (i == 0) {
-                    head = head.next;
-                    head.prev = null;
-                } else if (i == size - 1) {
-                    tail = tail.prev;
-                    tail.next = null;
-                } else {
-                    nodeToRemove.prev.next = nodeToRemove.next;
-                    nodeToRemove.next.prev = nodeToRemove.prev;
+        for (int index = 0; index < size; index++) {
+            try {
+                if (object.equals(nodeToRemove.value)) {
+                    if (size == 1) {
+                        head = tail = null;
+                    } else if (index == 0) {
+                        head = head.next;
+                        head.prev = null;
+                    } else if (index == size - 1) {
+                        tail = tail.prev;
+                        tail.next = null;
+                    } else {
+                        nodeToRemove.prev.next = nodeToRemove.next;
+                        nodeToRemove.next.prev = nodeToRemove.prev;
+                    }
+                    size--;
+                    break;
                 }
-                size--;
+            } catch (NullPointerException e) {
+                System.out.println("Illegal trying operating with null");
             }
+
+            nodeToRemove = nodeToRemove.next;
         }
+
     }
 
     @Override
-    public Object remove(int index) {
+    public T remove(int index) {
         validateIndex(index);
-        Node nodeToRemove;
+        Node<T> nodeToRemove;
 
         if (size == 1) {
             nodeToRemove = head;
@@ -109,13 +113,13 @@ public class LinkedList implements List {
     }
 
     @Override
-    public void set(Object object, int index) {
+    public void set(T object, int index) {
         validateIndex(index);
         getNode(index).value = object;
     }
 
     @Override
-    public boolean contains(Object object) {
+    public boolean contains(T object) {
         return indexOf(object) != -1;
     }
 
@@ -126,7 +130,7 @@ public class LinkedList implements List {
     }
 
     @Override
-    public int indexOf(Object object) {
+    public int indexOf(T object) {
         Node node = head;
         for (int i = 0; i < size; i++) {
             if (object.equals(node.value)) {
@@ -138,7 +142,7 @@ public class LinkedList implements List {
     }
 
     @Override
-    public int lastIndexOf(Object object) {
+    public int lastIndexOf(T object) {
         Node node = tail;
         for (int i = size - 1; i >= 0; i--) {
             if (object.equals(node.value)) {
@@ -163,7 +167,7 @@ public class LinkedList implements List {
         }
     }
 
-    private Node getNode(int index) {
+    private Node<T> getNode(int index) {
         Node node;
 
         if (index <= size / 2) {
@@ -180,12 +184,12 @@ public class LinkedList implements List {
         return node;
     }
 
-    private static class Node {
+    private static class Node<T> {
         private Node prev;
         private Node next;
-        private Object value;
+        private T value;
 
-        private Node(Object obj) {
+        private Node(T obj) {
             value = obj;
         }
 

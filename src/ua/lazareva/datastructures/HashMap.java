@@ -1,15 +1,18 @@
 package ua.lazareva.datastructures;
 
+import java.util.ArrayList;
+
 
 public class HashMap {
 
-    private java.util.ArrayList<Entry>[] array;
+    private ArrayList<Entry>[] array;
     private int size;
 
     public HashMap() {
-        array = new java.util.ArrayList[5];
-        for (int i = 0; i < array.length; i++)
-            array[i] = new java.util.ArrayList<>();
+        array =  new ArrayList[5];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = new ArrayList<>();
+        }
     }
 
     public int size() {
@@ -65,11 +68,11 @@ public class HashMap {
 
     private void ensureCapacity() {
         if (size > array.length * 0.75) {
-            java.util.ArrayList<Entry>[] arrayExtended = new java.util.ArrayList[array.length * 2];
+           ArrayList<Entry>[] arrayExtended = new ArrayList[array.length * 2];
             for (int i = 0; i < arrayExtended.length; i++) {
-                arrayExtended[i] = new java.util.ArrayList<>();
+                arrayExtended[i] = new ArrayList<>();
             }
-            java.util.ArrayList<Entry>[] arrayOld = array;
+           ArrayList<Entry>[] arrayOld = array;
             array = arrayExtended;
             size = 0;
             for (int i = 0; i < arrayOld.length; i++) {
@@ -82,7 +85,7 @@ public class HashMap {
 
     public Object remove(Object key) {
         int index = getBucketIndex(key);
-        java.util.ArrayList<Entry> bucket = array[index];
+        ArrayList<Entry> bucket = array[index];
 
         for (int i = 0; i < bucket.size(); i++) {
             Entry entry = bucket.get(i);
@@ -108,7 +111,7 @@ public class HashMap {
         if (!containsKey(key)) {
 
             int index = getBucketIndex(key);
-            java.util.ArrayList<Entry> bucket = array[index];
+            ArrayList<Entry> bucket = array[index];
             Entry entry = new Entry(key, value);
             bucket.add(entry);
             size++;
