@@ -1,12 +1,12 @@
 package ua.lazareva.datastructures.list;
 
-public class ArrayList<T> implements List<T>{
+public class ArrayList<T> implements List<T> {
 
     private T[] array;
     private int size;
 
-
-    public ArrayList() {
+    @SuppressWarnings("unchecked")
+    ArrayList() {
         array = (T[]) new Object[5];
     }
 
@@ -27,7 +27,7 @@ public class ArrayList<T> implements List<T>{
     }
 
     @Override
-    public void remove(T object)  {
+    public void remove(T object) {
 
         for (int index = 0; index < size; index++) {
             if (array[index].equals(object)) {
@@ -37,6 +37,7 @@ public class ArrayList<T> implements List<T>{
         }
     }
 
+    @SuppressWarnings("unchecked")
     public void add(T obj, int index) {  //0<=index<=size
         validateIndexToAdd(index);
 

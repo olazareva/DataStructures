@@ -1,10 +1,10 @@
 package ua.lazareva.datastructures.list;
 
-public class LinkedListTest extends AbstractListTest{
+public class LinkedListTest extends AbstractListTest {
 
 
     @Override
-    protected List getList() {
-        return new LinkedList();
+    protected List<Object> getList() {
+        return new LinkedList<>();
     }
 }

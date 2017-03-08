@@ -3,7 +3,6 @@ package ua.lazareva.datastructures.list;
 
 import org.junit.Before;
 import org.junit.Test;
-import ua.lazareva.datastructures.list.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -11,14 +10,14 @@ import static org.junit.Assert.assertTrue;
 
 public abstract class AbstractListTest {
 
-    private List listWithThreeElements;
-    private List listWithTenElements;
-    private List listWithZeroElements;
+    private List<Object> listWithThreeElements;
+    private List<Object> listWithTenElements;
+    private List<Object> listWithZeroElements;
 
 
     @Before
     public void before() {
-        listWithThreeElements =getList();
+        listWithThreeElements = getList();
         for (int i = 0; i < 3; i++) {
             listWithThreeElements.add(i);
         }
@@ -161,6 +160,6 @@ public abstract class AbstractListTest {
         assertEquals(7, listWithTenElements.size());
     }
 
-    protected abstract List getList();
+    protected abstract List<Object> getList();
 
 }

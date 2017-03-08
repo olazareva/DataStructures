@@ -3,8 +3,8 @@ package ua.lazareva.datastructures.list;
 
 public class LinkedList<T> implements List<T> {
     private int size;
-    private Node head;
-    private Node tail;
+    private Node<T> head;
+    private Node<T> tail;
 
     @Override
     public int size() {
@@ -19,10 +19,10 @@ public class LinkedList<T> implements List<T> {
     @Override
     public void add(T object, int index) {
         validateIndexToAdd(index);
-        Node nodeToAdd = new Node(object);
+        Node<T> nodeToAdd = new Node<>(object);
 
         if (size == 0) {
-    head = tail = nodeToAdd;
+            head = tail = nodeToAdd;
         } else if (index == 0) {
             nodeToAdd.next = head;
             head.prev = nodeToAdd;
@@ -32,7 +32,7 @@ public class LinkedList<T> implements List<T> {
             nodeToAdd.prev = tail;
             tail = nodeToAdd;
         } else {
-            Node nodeToReplace;
+            Node<T> nodeToReplace;
             nodeToReplace = getNode(index);
 
             nodeToAdd.prev = nodeToReplace.prev;
@@ -53,33 +53,27 @@ public class LinkedList<T> implements List<T> {
 
     @Override
     public void remove(T object) {
-        Node nodeToRemove = head;
+        Node<T> nodeToRemove = head;
 
         for (int index = 0; index < size; index++) {
-            try {
-                if (object.equals(nodeToRemove.value)) {
-                    if (size == 1) {
-                        head = tail = null;
-                    } else if (index == 0) {
-                        head = head.next;
-                        head.prev = null;
-                    } else if (index == size - 1) {
-                        tail = tail.prev;
-                        tail.next = null;
-                    } else {
-                        nodeToRemove.prev.next = nodeToRemove.next;
-                        nodeToRemove.next.prev = nodeToRemove.prev;
-                    }
-                    size--;
-                    break;
+            if (object.equals(nodeToRemove.value)) {
+                if (size == 1) {
+                    head = tail = null;
+                } else if (index == 0) {
+                    head = head.next;
+                    head.prev = null;
+                } else if (index == size - 1) {
+                    tail = tail.prev;
+                    tail.next = null;
+                } else {
+                    nodeToRemove.prev.next = nodeToRemove.next;
+                    nodeToRemove.next.prev = nodeToRemove.prev;
                 }
-            } catch (NullPointerException e) {
-                System.out.println("Illegal trying operating with null");
+                size--;
+                break;
             }
-
             nodeToRemove = nodeToRemove.next;
         }
-
     }
 
     @Override
@@ -131,7 +125,7 @@ public class LinkedList<T> implements List<T> {
 
     @Override
     public int indexOf(T object) {
-        Node node = head;
+        Node<T> node = head;
         for (int i = 0; i < size; i++) {
             if (object.equals(node.value)) {
                 return i;
@@ -143,7 +137,7 @@ public class LinkedList<T> implements List<T> {
 
     @Override
     public int lastIndexOf(T object) {
-        Node node = tail;
+        Node<T> node = tail;
         for (int i = size - 1; i >= 0; i--) {
             if (object.equals(node.value)) {
                 return i;
@@ -168,7 +162,7 @@ public class LinkedList<T> implements List<T> {
     }
 
     private Node<T> getNode(int index) {
-        Node node;
+        Node<T> node;
 
         if (index <= size / 2) {
             node = head;
@@ -185,8 +179,8 @@ public class LinkedList<T> implements List<T> {
     }
 
     private static class Node<T> {
-        private Node prev;
-        private Node next;
+        private Node<T> prev;
+        private Node<T> next;
         private T value;
 
         private Node(T obj) {

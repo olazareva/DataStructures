@@ -3,13 +3,14 @@ package ua.lazareva.datastructures;
 import java.util.ArrayList;
 
 
-public class HashMap {
+public class HashMap<K, V> {
 
-    private ArrayList<Entry>[] array;
+    private ArrayList<Entry<K, V>>[] array;
     private int size;
 
+    @SuppressWarnings("unchecked")
     public HashMap() {
-        array =  new ArrayList[5];
+        array = new ArrayList[5];
         for (int i = 0; i < array.length; i++) {
             array[i] = new ArrayList<>();
         }
@@ -19,17 +20,17 @@ public class HashMap {
         return size;
     }
 
-    public boolean containsKey(Object key) {
+    public boolean containsKey(K key) {
         int index = getBucketIndex(key);
-        for (Entry entry : array[index]) {
-            if ((key == null && entry.key == null) ||key.equals( entry.key)) return true;
+        for (Entry<K, V> entry : array[index]) {
+            if ((key == null && entry.key == null) || key.equals(entry.key)) return true;
         }
         return false;
     }
 
-    public boolean containsValue(Object value) {
+    public boolean containsValue(V value) {
         for (int i = 0; i < array.length; i++) {
-            for (Entry entry : array[i]) {
+            for (Entry<K, V> entry : array[i]) {
                 if ((value == null && entry.value == null) || value.equals(entry.value)) {
                     return true;
                 }
@@ -38,9 +39,9 @@ public class HashMap {
         return false;
     }
 
-    public Object get(Object key) {
+    public V get(K key) {
         int index = getBucketIndex(key);
-        for (Entry entry : array[index]) {
+        for (Entry<K, V> entry : array[index]) {
             if ((key == null && entry.key == null) || key.equals(entry.key)) return entry.value;
         }
         return null;
@@ -50,47 +51,48 @@ public class HashMap {
         return size == 0;
     }
 
-    public Object put(Object key, Object value) {
+    public V put(K key, V value) {
         ensureCapacity();
         int index = getBucketIndex(key);
-        java.util.ArrayList<Entry> bucket = array[index];
-        for (Entry entry : bucket) {
+        ArrayList<Entry<K, V>> bucket = array[index];
+        for (Entry<K, V> entry : bucket) {
             if ((key == null && entry.key == null) || key.equals(entry.key)) {
-                Object oldValue = entry.value;
+                V oldValue = entry.value;
                 entry.value = value;
                 return oldValue;
             }
         }
-        bucket.add(new Entry(key, value));
+        bucket.add(new Entry<>(key, value));
         size++;
         return value;
     }
 
+    @SuppressWarnings("unchecked")
     private void ensureCapacity() {
         if (size > array.length * 0.75) {
-           ArrayList<Entry>[] arrayExtended = new ArrayList[array.length * 2];
+            ArrayList<Entry<K, V>>[] arrayExtended =  new ArrayList[array.length * 2];
             for (int i = 0; i < arrayExtended.length; i++) {
                 arrayExtended[i] = new ArrayList<>();
             }
-           ArrayList<Entry>[] arrayOld = array;
+            ArrayList<Entry<K, V>>[] arrayOld = array;
             array = arrayExtended;
             size = 0;
             for (int i = 0; i < arrayOld.length; i++) {
-                for (Entry entry : arrayOld[i]) {
+                for (Entry<K, V> entry : arrayOld[i]) {
                     put(entry.key, entry.value);
                 }
             }
         }
     }
 
-    public Object remove(Object key) {
+    public V remove(K key) {
         int index = getBucketIndex(key);
-        ArrayList<Entry> bucket = array[index];
+        ArrayList<Entry<K, V>> bucket = array[index];
 
         for (int i = 0; i < bucket.size(); i++) {
-            Entry entry = bucket.get(i);
+            Entry<K, V> entry = bucket.get(i);
             if ((key == null && entry.key == null) || key.equals(entry.key)) {
-                Object tmpObject = entry.value;
+                V tmpObject = entry.value;
                 bucket.remove(i);
                 size--;
                 return tmpObject;
@@ -106,13 +108,13 @@ public class HashMap {
         size = 0;
     }
 
-    public Object putIfAbsent(Object key, Object value) {
+    public V putIfAbsent(K key, V value) {
 
         if (!containsKey(key)) {
 
             int index = getBucketIndex(key);
-            ArrayList<Entry> bucket = array[index];
-            Entry entry = new Entry(key, value);
+            ArrayList<Entry<K, V>> bucket = array[index];
+            Entry<K, V> entry = new Entry<>(key, value);
             bucket.add(entry);
             size++;
             return entry.value;
@@ -121,23 +123,23 @@ public class HashMap {
         return null;
     }
 
-    public void putAll(HashMap map) {
+    public void putAll(HashMap<K, V> map) {
         for (int i = 0; i < map.array.length; i++) {
-            for (Entry entry : map.array[i])
+            for (Entry<K, V> entry : map.array[i])
                 put(entry.key, entry.value);
         }
 
     }
 
-    public Object putAllIfAbsent(HashMap map) {
+    public V putAllIfAbsent(HashMap<K, V> map) {
         for (int i = 0; i < map.array.length; i++) {
-            for (Entry entry : map.array[i])
+            for (Entry<K, V> entry : map.array[i])
                 putIfAbsent(entry.key, entry.value);
         }
         return null;
     }
 
-    private int getBucketIndex(Object key) {
+    private int getBucketIndex(K key) {
         if (key == null) {
             return 0;
         }
@@ -145,11 +147,11 @@ public class HashMap {
 
     }
 
-    private static class Entry {
-        private Object key;
-        private Object value;
+    private static class Entry<K, V> {
+        private K key;
+        private V value;
 
-        private Entry(Object key, Object value) {
+        private Entry(K key, V value) {
             this.key = key;
             this.value = value;
         }
