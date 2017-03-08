@@ -37,12 +37,13 @@ public class ArrayList<T> implements List<T> {
         }
     }
 
-    @SuppressWarnings("unchecked")
+
     public void add(T obj, int index) {  //0<=index<=size
         validateIndexToAdd(index);
 
         if (size == array.length) {
             int newLength = (int) (array.length * 1.5) + 1;
+            @SuppressWarnings("unchecked")
             T[] newArray = (T[]) new Object[newLength];
 
             System.arraycopy(array, 0, newArray, 0, size);

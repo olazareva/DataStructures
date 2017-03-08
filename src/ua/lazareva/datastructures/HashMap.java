@@ -23,7 +23,9 @@ public class HashMap<K, V> {
     public boolean containsKey(K key) {
         int index = getBucketIndex(key);
         for (Entry<K, V> entry : array[index]) {
-            if ((key == null && entry.key == null) || key.equals(entry.key)) return true;
+            if ((key == null && entry.key == null) || key.equals(entry.key)) {
+                return true;
+            }
         }
         return false;
     }
@@ -42,7 +44,9 @@ public class HashMap<K, V> {
     public V get(K key) {
         int index = getBucketIndex(key);
         for (Entry<K, V> entry : array[index]) {
-            if ((key == null && entry.key == null) || key.equals(entry.key)) return entry.value;
+            if ((key == null && entry.key == null) || key.equals(entry.key)) {
+                return entry.value;
+            }
         }
         return null;
     }
@@ -67,10 +71,11 @@ public class HashMap<K, V> {
         return value;
     }
 
-    @SuppressWarnings("unchecked")
+
     private void ensureCapacity() {
         if (size > array.length * 0.75) {
-            ArrayList<Entry<K, V>>[] arrayExtended =  new ArrayList[array.length * 2];
+            @SuppressWarnings("unchecked")
+            ArrayList<Entry<K, V>>[] arrayExtended = new ArrayList[array.length * 2];
             for (int i = 0; i < arrayExtended.length; i++) {
                 arrayExtended[i] = new ArrayList<>();
             }
@@ -111,30 +116,29 @@ public class HashMap<K, V> {
     public V putIfAbsent(K key, V value) {
 
         if (!containsKey(key)) {
-
             int index = getBucketIndex(key);
             ArrayList<Entry<K, V>> bucket = array[index];
             Entry<K, V> entry = new Entry<>(key, value);
             bucket.add(entry);
             size++;
             return entry.value;
-
         }
         return null;
     }
 
     public void putAll(HashMap<K, V> map) {
         for (int i = 0; i < map.array.length; i++) {
-            for (Entry<K, V> entry : map.array[i])
+            for (Entry<K, V> entry : map.array[i]) {
                 put(entry.key, entry.value);
+            }
         }
-
     }
 
     public V putAllIfAbsent(HashMap<K, V> map) {
         for (int i = 0; i < map.array.length; i++) {
-            for (Entry<K, V> entry : map.array[i])
+            for (Entry<K, V> entry : map.array[i]) {
                 putIfAbsent(entry.key, entry.value);
+            }
         }
         return null;
     }
