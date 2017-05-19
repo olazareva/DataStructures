@@ -1,34 +1,19 @@
 package ua.lazareva.datastructures.queue;
 
 
-public class LinkedQueue<E> implements Queue<E> {
-    private int maxQueueSize = 5;
-    private int size;
+public class LinkedQueue<E> extends AbstractQueueSizeControl implements Queue<E> {
     private Node<E> head;
     private Node<E> tail;
 
-    public int getMaxQueueSize() {
-        return maxQueueSize;
-    }
-
-    public void setMaxQueueSize(int maxQueueSize) {
-        if (maxQueueSize <= size) {
-            throw new IllegalArgumentException("New queue size is less than current. " +
-                    "Remove queue elements and try again");
-        } else {
-            this.maxQueueSize = maxQueueSize;
-        }
-    }
-
-    @Override
-    public int getSize() {
-        return size;
+    @SuppressWarnings("unchecked")
+    public LinkedQueue(int size) {
+        maxQueueSize = size;
     }
 
     @Override
     public void push(E value) {
         if (value != null && !value.equals("")) {
-            checkAviableCapacity();
+            checkAvailableCapacity();
             Node<E> nodeToAdd = new Node<>(value);
             if (size == 0) {
                 tail = head = nodeToAdd;
@@ -42,7 +27,6 @@ public class LinkedQueue<E> implements Queue<E> {
             throw new IllegalArgumentException("NULLs not allowed to push into queue");
         }
     }
-
 
     @Override
     public E peek() {
@@ -75,15 +59,6 @@ public class LinkedQueue<E> implements Queue<E> {
 
         private Node(E value) {
             this.value = value;
-        }
-    }
-
-    private void checkAviableCapacity() {
-        if (size == maxQueueSize) {
-            throw new RuntimeException("The Limit of queue size is exceeded already. " +
-                    "Can not add element to the queue.");
-
-
         }
     }
 }
