@@ -1,25 +1,31 @@
 package ua.lazareva.list;
 
-public class ArrayList implements List {
-    private Object[] array = new Object[5];
+public class ArrayList<T> implements List<T> {
+
+    private T[] array;
     private int size;
 
-    @Override
-    public void add(Object value) {
-        add(value, size);
+    @SuppressWarnings("unchecked")
+    public ArrayList() {
+        array = (T[]) new Object[5];
     }
 
     @Override
-    public void add(Object value, int index) {
+    public void add(T t) {
+        add(t, size);
+    }
+
+    @Override
+    public void add(T t, int index) {
         validateIndexToAdd(index);
         ensureCapacity();
         System.arraycopy(array, index, array, index + 1, size - index);
-        array[index] = value;
+        array[index] = t;
         size++;
     }
 
     @Override
-    public Object remove(int index) {
+    public T remove(int index) {
         validateIndex(index);
         for (int i = index; i < size; i++) {
             array[i] = array[i+1];
@@ -30,16 +36,16 @@ public class ArrayList implements List {
     }
 
     @Override
-    public Object get(int index) {
+    public T get(int index) {
         validateIndex(index);
         return array[index];
     }
 
     @Override
-    public Object set(Object value, int index) {
+    public T set(T t, int index) {
         validateIndex(index);
-        Object tmp = array[index];
-        array[index] = value;
+        T tmp = array[index];
+        array[index] = t;
         return tmp;
     }
 
@@ -62,14 +68,14 @@ public class ArrayList implements List {
     }
 
     @Override
-    public boolean contains(Object value) {
-        return indexOf(value)!=-1;
+    public boolean contains(T t) {
+        return indexOf(t)!=-1;
     }
 
     @Override
-    public int indexOf(Object value) {
+    public int indexOf(T t) {
         for (int i = 0; i < size; i++) {
-            if (array[i].equals(value)) {
+            if (array[i].equals(t)) {
                 return i;
             }
         }
@@ -77,9 +83,9 @@ public class ArrayList implements List {
     }
 
     @Override
-    public int lastIndexOf(Object value) {
-        for (int i = size - 1; i > 0; i--) {
-            if (array[i].equals(value)) {
+    public int lastIndexOf(T t) {
+        for (int i = size - 1; i >=0; i--) {
+            if (array[i].equals(t)) {
                 return i;
             }
         }
@@ -112,18 +118,19 @@ public class ArrayList implements List {
         }
     }
 
+    @SuppressWarnings("unchecked")
     private void ensureCapacity() {
         if (size == array.length) {
-            Object[] tmp = new Object[(int) (size * 1.5)];
+            T[] tmp = (T[]) new Object[(int) (size * 1.5)];
             System.arraycopy(array, 0, tmp, 0, array.length);
             clear(array);
             array = tmp;
         }
     }
 
-    private void clear(Object[] obj) {
-        for (int i = 0; i < obj.length; i++) {
-            obj[i] = null;
+    private void clear(T[] t) {
+        for (int i = 0; i < t.length; i++) {
+            t[i] = null;
         }
     }
 }

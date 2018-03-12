@@ -1,19 +1,19 @@
 package ua.lazareva.list;
 
-public class LinkedList implements List {
+public class LinkedList<T> implements List<T> {
     private int size;
-    private Node head, tail, node;
+    private Node<T> head, tail;
 
     @Override
-    public void add(Object value) {
-        add(value, size);
+    public void add(T t) {
+        add(t, size);
     }
 
     @Override
     public String toString() {
         StringBuilder string = new StringBuilder();
         string.append("[");
-        node = head;
+        Node<T> node = head;
         for (int i = 0; i < size; i++) {
             string.append(node.value);
             if (i < size - 1) {
@@ -26,76 +26,69 @@ public class LinkedList implements List {
     }
 
     @Override
-    public void add(Object value, int index) {
+    public void add(T t, int index) {
         validateIndexToAdd(index);
-        Node nodeToAdd = new Node(value);
-        /*ins at head*/
-        if (index == 0) {
-            if (size == 0) {
-                head = tail = nodeToAdd;
-            } else {
-                head.prev = nodeToAdd;
-                nodeToAdd.next = head;
-                head = nodeToAdd;
-            }
-        }
-        /*ins at tail*/
-        if (index == size && size > 0) {
+        Node<T> nodeToAdd = new Node<>(t);
+        if (size == 0) {
+            head = tail = nodeToAdd;
+        } else if (index == 0) {
+            head.prev = nodeToAdd;
+            nodeToAdd.next = head;
+            head = nodeToAdd;
+        } else if (index == size) {
             tail.next = nodeToAdd;
             nodeToAdd.prev = tail;
             tail = nodeToAdd;
-        }
-        /*ins between*/
-        if (index > 0 && index < size) {
-            node = getNode(index);
+        } else {
+            Node<T> node = getNode(index);
             nodeToAdd.prev = node.prev;
             nodeToAdd.next = node;
             node.prev.next = nodeToAdd;
             node.prev = nodeToAdd;
         }
-
         size++;
     }
 
     @Override
-    public Object remove(int index) {
+    public T remove(int index) {
         validateIndex(index);
-        Object tmp = 0;
-        if (index == 0) {
-            tmp = head.value;
+        T removed = null;
+        if(size==1){
+            head = tail=null;
+        } else if (index == 0) {
+            removed = head.value;
             head = head.next;
-        }
-        if (index == size - 1) {
-            tmp = tail.value;
+        } else if (index == size - 1) {
+            removed = tail.value;
             tail = tail.prev;
-        }
-        if (index > 0 && index < size - 1) {
-            Node nodeToRemove = getNode(index);
+        } else {
+            Node<T> nodeToRemove = getNode(index);
             nodeToRemove.prev.next = nodeToRemove.next;
             nodeToRemove.next.prev = nodeToRemove.prev;
+            removed = nodeToRemove.value;
         }
         size--;
-        return tmp;
+        return removed;
     }
 
     @Override
-    public Object get(int index) {
+    public T get(int index) {
         validateIndex(index);
         return getNode(index).value;
     }
 
     @Override
-    public Object set(Object value, int index) {
+    public T set(T t, int index) {
         validateIndex(index);
-        node = getNode(index);
-        Object tmp = node.value;
-        node.value = value;
+        Node<T> node = getNode(index);
+        T tmp = node.value;
+        node.value = t;
         return tmp;
     }
 
     @Override
     public void clear() {
-        node = head;
+        Node<T> node = head;
         for (int i = 0; i < size; i++) {
             node.value = null;
             node.prev = null;
@@ -119,15 +112,15 @@ public class LinkedList implements List {
     }
 
     @Override
-    public boolean contains(Object value) {
-        return indexOf(value) != -1;
+    public boolean contains(T t) {
+        return indexOf(t) != -1;
     }
 
     @Override
-    public int indexOf(Object value) {
-        node = head;
+    public int indexOf(T t) {
+        Node<T> node = head;
         for (int i = 0; i < size; i++) {
-            if (node.value.equals(value)) {
+            if (node.value.equals(t)) {
                 return i;
             }
             node = node.next;
@@ -136,10 +129,10 @@ public class LinkedList implements List {
     }
 
     @Override
-    public int lastIndexOf(Object value) {
-        node = tail;
+    public int lastIndexOf(T t) {
+        Node<T> node = tail;
         for (int i = 0; i < size; i++) {
-            if (node.value.equals(value)) {
+            if (node.value.equals(t)) {
                 return size - i - 1;
             }
             node = node.prev;
@@ -147,13 +140,13 @@ public class LinkedList implements List {
         return -1;
     }
 
-    private class Node {
-        private Node prev;
-        private Node next;
-        private Object value;
+    private class Node<V> {
+        private Node<V> prev;
+        private Node<V> next;
+        private V value;
 
-        private Node(Object value) {
-            this.value = value;
+        private Node(V v) {
+            this.value = v;
         }
     }
 
@@ -169,7 +162,8 @@ public class LinkedList implements List {
         }
     }
 
-    private Node getNode(int index) {
+    private Node<T> getNode(int index) {
+        Node<T> node;
         if (index < size / 2) {
             node = head;
             for (int i = 0; i < index; i++) {

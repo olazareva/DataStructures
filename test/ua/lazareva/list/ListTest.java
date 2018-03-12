@@ -6,9 +6,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public abstract class ListTest {
-    private List list = getList();
+    private List<Object> list = getList();
 
-    protected abstract List getList();
+    protected abstract List<Object> getList();
 
     @Before
     public void before() {
@@ -46,6 +46,14 @@ public abstract class ListTest {
         for (int i = 0; i <list.size() ; i++) {
             assertEquals(expected[i], list.get(i));
         }
+
+        list.remove(2);
+        list.remove(1);
+        list.remove(0);
+        assertEquals(0, list.size());
+        for (int i = 0; i <list.size() ; i++) {
+            System.out.println(list.get(i));
+        }
     }
 
     @Test
@@ -77,7 +85,7 @@ public abstract class ListTest {
     }
 
     @Test
-    public void clear() {
+    public void testClear() {
         list.clear();
         assertEquals(0, list.size());
     }
